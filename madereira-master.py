@@ -140,7 +140,7 @@ class WelcomeScreen(QtWidgets.QWidget):
 
         # Parte superior: Imagem do logo
         self.logo_label = QtWidgets.QLabel()
-        logo_pixmap = QtGui.QPixmap("Imgs/logo.png")  # Substitua pelo caminho correto da imagem
+        logo_pixmap = QtGui.QPixmap("Imgs/Imgs/logo.png")  # Substitua pelo caminho correto da imagem
         self.logo_label.setPixmap(logo_pixmap.scaledToHeight(200, QtCore.Qt.SmoothTransformation))  # Ajusta a altura
         self.logo_label.setAlignment(QtCore.Qt.AlignCenter)
         layout.addWidget(self.logo_label, stretch=1)  # Adiciona a imagem com prioridade de espaço
@@ -149,13 +149,13 @@ class WelcomeScreen(QtWidgets.QWidget):
         button_layout = QtWidgets.QVBoxLayout()  # Layout vertical para os botões
 
         # Criação dos botões com efeitos
-        self.btn_clientes = self.create_button("Clientes", "Imgs/cliente.png", self.open_clientes)
+        self.btn_clientes = self.create_button("Clientes", "Imgs/Imgs/cliente.png", self.open_clientes)
         button_layout.addWidget(self.btn_clientes)
 
-        self.btn_produtos = self.create_button("Produtos", "Imgs/Produtos.png", self.open_produtos)
+        self.btn_produtos = self.create_button("Produtos", "Imgs/Imgs/Produtos.png", self.open_produtos)
         button_layout.addWidget(self.btn_produtos)
 
-        self.btn_orcamento = self.create_button("Orçamento", "Imgs/orcamento.png", self.open_orcamento)
+        self.btn_orcamento = self.create_button("Orçamento", "Imgs/Imgs/orcamento.png", self.open_orcamento)
         button_layout.addWidget(self.btn_orcamento)
 
         # Adiciona o layout dos botões na parte inferior
